@@ -260,7 +260,7 @@
     "safe-js": {
       "version": "0.0.15",
       "from": "safe-js@0.0.15",
-      "resolved": "git://github.com/krishnaindia/safe-js.git#7139310d9e02bfee6bac9d7904de2aa0edb7307b"
+      "resolved": "git://github.com/krishnaindia/safe-js.git#d222d28cfb9f67cd8899104131d63ebb75cf7b6e"
     },
     "sqlite3": {
       "version": "3.1.4",
