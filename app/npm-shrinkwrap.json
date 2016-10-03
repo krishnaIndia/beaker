@@ -10,7 +10,7 @@
     "beaker-plugin-safe": {
       "version": "0.0.9",
       "from": "beaker-plugin-safe@0.0.9",
-      "resolved": "git://github.com/krishnaIndia/beaker-plugin-safe.git#17371582b6717c45f0f4bf76324f38e60c41a58b"
+      "resolved": "git://github.com/krishnaIndia/beaker-plugin-safe.git#168b850a3e9688992a73b72d39562094f395a53e"
     },
     "bel": {
       "version": "4.4.3",
@@ -260,7 +260,7 @@
     "safe-js": {
       "version": "0.0.15",
       "from": "safe-js@0.0.15",
-      "resolved": "git://github.com/krishnaindia/safe-js.git#d222d28cfb9f67cd8899104131d63ebb75cf7b6e"
+      "resolved": "git://github.com/krishnaindia/safe-js.git#4b1b019b920d1f2f0488e84279eec9b74c8ddca6"
     },
     "sqlite3": {
       "version": "3.1.4",
