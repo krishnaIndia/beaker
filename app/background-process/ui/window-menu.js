@@ -39,6 +39,18 @@ var fileMenu = {
       }
     },
     {
+      label: 'Toggle SAFE Browsing',
+      checked: true,
+      accelerator: 'CmdOrCtrl+Shift+L',
+      click: function (item, win) {
+        if (win)
+        {
+            item.checked = !item.checked;
+            win.webContents.isSafe = item.checked;
+        }
+      }
+    },
+    {
       label: 'Open File',
       accelerator: 'CmdOrCtrl+O',
       click: function (item, win) {
@@ -85,8 +97,8 @@ var editMenu = {
     { label: "Copy", accelerator: "CmdOrCtrl+C", selector: "copy:" },
     { label: "Paste", accelerator: "CmdOrCtrl+V", selector: "paste:" },
     { label: "Select All", accelerator: "CmdOrCtrl+A", selector: "selectAll:" },
-    { 
-      label: "Cut",
+    {
+      label: "Find in Page",
       accelerator: "CmdOrCtrl+F",
       click: function (item, win) {
         if (win) win.webContents.send('command', 'edit:find')

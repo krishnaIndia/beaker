@@ -9,8 +9,6 @@ https://safenetforum.org/
 https://safenetforum.org/t/safer-browser-s-proposal-donation-address-in-op/10336/247
 http://maidsafe.net/
 
-## Using the SAFE API
-
 SAFE Beaker Browser uses [safe-js](https://github.com/joshuef/safe-js) to interact with the safe launcher.
 
 You have three main APIs available to SAFE sites:
@@ -20,11 +18,6 @@ You have three main APIs available to SAFE sites:
 - `window.safeDNS`;
 
 Each of these is a mapping to safejs functions, which (currently limited) documentation, you can find (here)[https://github.com/joshuef/safe-js)];
-
-
-## Beaker Browser
-
-SAFE Beaker Browser is a lightly modified fork of the [decentralized beaker browser](https://www.beakerbrowser.net/).
 
 
 ## Development Install Instructions:
@@ -77,4 +70,10 @@ SAFE Beaker Browser is a lightly modified fork of the [decentralized beaker brow
  `npm start` should work afterwards.
 
  If you're doing development, `npm run watch` to have assets build automatically.
-  
+
+
+## License
+
+SAFE Beaker Browser is a lightly modified fork of the [decentralized beaker browser](https://www.beakerbrowser.net/).
+
+Modified MIT as per the (BeakerLicense)(https://github.com/joshuef/beaker/blob/master/BEAKER_LICENSE.md)
