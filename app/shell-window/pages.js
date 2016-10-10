@@ -15,6 +15,8 @@ const ERR_ABORTED = -3
 const ERR_CONNECTION_REFUSED = -102
 const ERR_INSECURE_RESPONSE = -501
 
+let webSecurityDisabled = false;
+
 export const DEFAULT_URL = 'beaker:start'
 
 // globals
@@ -331,6 +333,38 @@ export function getActive () {
   return activePage
 }
 
+
+export function toggleSafe ( )
+{
+    var webContents = remote.getCurrentWindow().webContents;
+        
+    if( typeof(webContents.isSafe) === 'undefined' )
+    {
+        webContents.isSafe = true;
+    }
+    
+    webContents.isSafe = ! webContents.isSafe;
+
+    let pages = getAll();
+    
+    pages.forEach( page => 
+    {
+        // if (page)
+        page.reload()    
+        
+    })
+
+}
+
+export function toggleWebSecurity( )
+{
+    webSecurityDisabled = !webSecurityDisabled;
+}
+
+export function getActive () {
+  return activePage
+}
+
 export function getAdjacentPage (page, offset) {
   if (pages.length > 1) {
     // lookup the index
@@ -621,6 +655,12 @@ function createWebviewEl (id, url) {
   el.dataset.id = id
   el.setAttribute('preload', 'file://'+path.join(remote.app.getAppPath(), 'webview-preload.build.js'))
   el.setAttribute('src', url || DEFAULT_URL)
+  
+  if( webSecurityDisabled )
+  {
+      el.setAttribute('disablewebsecurity', true)
+  }
+  
   return el
 }
 
